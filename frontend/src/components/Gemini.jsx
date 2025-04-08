@@ -37,6 +37,10 @@ const Gemini = () => {
         placeholder="Hi I am Gemini, how may I help you?"
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+                sendMessage(); 
+            }}}
         className="w-[80%] h-10 border border-[#0000001e] px-4 text-sm focus:outline-none focus:ring-1"
       />
             <button className= "h-10 w-[20%] bg-gray-800 text-white px-4 py-2 hover:bg-gray-900 transition"
