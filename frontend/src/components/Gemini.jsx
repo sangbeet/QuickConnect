@@ -13,7 +13,7 @@ const Gemini = () => {
         setInput("");
 
         try {
-            const response = await axios.post("http://localhost:7000/geminichat", { message: input +""});
+            const response = await axios.post("/geminichat", { message: input +""});
 
             setMessages([...newMessages, { text: response.data.response, sender: "Gemini" }]);
         } catch (error) {
